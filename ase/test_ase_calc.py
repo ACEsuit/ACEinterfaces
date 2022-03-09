@@ -5,7 +5,9 @@ import ace
 
 at = read(Path(__file__).parent / "../assets/ch_test2.xyz")
 
-cace_calc = ace.ACECalculator(jsonpath=Path(__file__).parent / "../assets/CH_ace_test.json", ACE_version=1)
+ace_version = 1
+cace_calc = ace.ACECalculator(jsonpath=Path(__file__).parent / f"../assets/CH_ace_test_ACE{ace_version}.json", ACE_version=ace_version)
+
 
 at.set_calculator(cace_calc)
 
